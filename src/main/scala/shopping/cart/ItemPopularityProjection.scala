@@ -30,7 +30,7 @@ object ItemPopularityProjection {
                                    repository: ItemPopularityRepository,
                                    index: Int)
   : ExactlyOnceProjection[Offset, EventEnvelope[ShoppingCart.Event]] = {
-    val tag = ShoppingCart.tags(index)
+    val tag: String = ShoppingCart.tags(index)
 
     val sourceProvider
     : SourceProvider[Offset, EventEnvelope[ShoppingCart.Event]] =

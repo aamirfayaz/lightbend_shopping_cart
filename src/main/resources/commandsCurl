@@ -27,6 +27,7 @@ grpcurl -d '{\"cartId\":\"cart2\", \"itemId\":\"socks\", \"quantity\":3}' -plain
 
 grpcurl -d '{\"cartId\":\"cart2\"}' -plaintext 127.0.0.1:8101 shoppingcart.ShoppingCartService/GetCart
 
+cmd: ./grpcurl -d '{"cartId":"cart2"}''  -plaintext 127.0.0.1:8101 shoppingcart.ShoppingCartService/GetCart
 3.Check out cart:
 
 grpcurl -d '{\"cartId\":\"cart2\"}' -plaintext 127.0.0.1:8101 shoppingcart.ShoppingCartService/Checkout

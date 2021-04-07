@@ -1,6 +1,7 @@
 package shopping.cart
 
 import akka.actor.typed.{ActorRef, ActorSystem, Behavior, SupervisorStrategy}
+import akka.cluster.sharding.typed.ShardingEnvelope
 import akka.cluster.sharding.typed.scaladsl.{ClusterSharding, Entity, EntityTypeKey}
 import akka.pattern.StatusReply
 import akka.persistence.typed.PersistenceId
@@ -111,7 +112,7 @@ object ShoppingCart {
         else
           Effect
             .persist(ItemAdded(cartId, itemId, quantity))
-            .thenReply(replyTo) { updatedCart =>
+            .thenReply(replyTo) { updatedCart: State =>
               StatusReply.Success(updatedCart.toSummary)
             }
 
@@ -126,6 +127,7 @@ object ShoppingCart {
               StatusReply.Success(updatedCart.toSummary))
 
       case Get(replyTo) =>
+        //reployTo ! state.toSummary
         Effect.reply(replyTo)(state.toSummary)
     }
   }
@@ -156,8 +158,11 @@ object ShoppingCart {
         state.checkout(eventTime)
     }
   }
+
   val EntityKey: EntityTypeKey[Command] =
     EntityTypeKey[Command]("ShoppingCart")
+
+  println("******222************" + EntityKey)
 
   import akka.cluster.sharding.typed.scaladsl.EntityContext
 
@@ -166,11 +171,14 @@ object ShoppingCart {
   def init(system: ActorSystem[_]): Unit = {
     val behaviorFactory: EntityContext[Command] => Behavior[Command] = {
       entityContext =>
+        println("*****111*****" + entityContext.entityId)
         val i = math.abs(entityContext.entityId.hashCode % tags.size)
+        println("*****i*****" + i)
         val selectedTag = tags(i)
+        println("*****selectedTag*****" + selectedTag)
         ShoppingCart(entityContext.entityId, selectedTag)
     }
-    ClusterSharding(system).init(Entity(EntityKey)(behaviorFactory))
+    val x: ActorRef[ShardingEnvelope[Command]] = ClusterSharding(system).init(Entity(EntityKey)(behaviorFactory))
   }
 
 //  def init(system: ActorSystem[_]): Unit = {
