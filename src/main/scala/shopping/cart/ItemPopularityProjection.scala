@@ -10,10 +10,12 @@ import akka.projection.eventsourced.scaladsl.EventSourcedProvider
 import akka.projection.jdbc.scaladsl.JdbcProjection
 import akka.projection.scaladsl.{ExactlyOnceProjection, SourceProvider}
 import akka.projection.{ProjectionBehavior, ProjectionId}
+import akka.stream.scaladsl.Sink
 import shopping.cart.repository.{ItemPopularityRepository, ScalikeJdbcSession}
 
 object ItemPopularityProjection {
   def init(
+
             system: ActorSystem[_],
             repository: ItemPopularityRepository): Unit = {
     ShardedDaemonProcess(system).init(
@@ -32,12 +34,16 @@ object ItemPopularityProjection {
   : ExactlyOnceProjection[Offset, EventEnvelope[ShoppingCart.Event]] = {
     val tag: String = ShoppingCart.tags(index)
 
+    println("\n=====Came here for creating projection=============")
+    println("\nindex: " + index)
+    println("\ntag: " + tag)
     val sourceProvider
     : SourceProvider[Offset, EventEnvelope[ShoppingCart.Event]] =
       EventSourcedProvider.eventsByTag[ShoppingCart.Event](
         system = system,
         readJournalPluginId = JdbcReadJournal.Identifier,
         tag = tag)
+
 
     JdbcProjection.exactlyOnce(
       projectionId = ProjectionId("ItemPopularityProjection", tag),

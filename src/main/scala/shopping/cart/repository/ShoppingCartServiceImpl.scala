@@ -1,9 +1,8 @@
 package shopping.cart.repository
 
-import akka.actor.typed.{ActorRef, ActorSystem, DispatcherSelector}
+import akka.actor.typed.{ActorSystem, DispatcherSelector}
 import akka.cluster.sharding.typed.scaladsl.{ClusterSharding, EntityRef}
 import akka.grpc.GrpcServiceException
-import akka.pattern.StatusReply
 import akka.util.Timeout
 import io.grpc.Status
 import org.slf4j.LoggerFactory
@@ -31,10 +30,7 @@ class ShoppingCartServiceImpl(system: ActorSystem[_],itemPopularityRepository: I
     logger.info("addItem {} to cart {}", in.itemId, in.cartId)
 //    Future.successful(
 //      Cart(items = List(Item(in.itemId, in.quantity))))
-    println("-----Inside additem method------11")
-    println(ShoppingCart.EntityKey)
-    println(in.cartId)
-    println("-----Inside additem method------22")
+
     val entityRef: EntityRef[ShoppingCart.Command] = sharding.entityRefFor(ShoppingCart.EntityKey, in.cartId)
 
      // entityRef ask

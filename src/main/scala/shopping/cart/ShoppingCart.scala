@@ -162,11 +162,10 @@ object ShoppingCart {
   val EntityKey: EntityTypeKey[Command] =
     EntityTypeKey[Command]("ShoppingCart")
 
-  println("******222************" + EntityKey)
 
   import akka.cluster.sharding.typed.scaladsl.EntityContext
 
-  val tags = Vector.tabulate(5)(i => s"carts-$i")
+  val tags: Vector[String] = Vector.tabulate(5)(i => s"carts-$i")
 
   def init(system: ActorSystem[_]): Unit = {
     val behaviorFactory: EntityContext[Command] => Behavior[Command] = {
@@ -188,6 +187,7 @@ object ShoppingCart {
 //  }
 
   def apply(cartId: String, projectionTag: String): Behavior[Command] = {
+    println("\n====From Apply EventSourcedBehaviour" + projectionTag)
     EventSourcedBehavior
       .withEnforcedReplies[Command, Event, State](
         persistenceId = PersistenceId(EntityKey.name, cartId),
