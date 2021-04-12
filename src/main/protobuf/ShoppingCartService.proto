@@ -7,6 +7,25 @@ package shoppingcart;
 
 // gRPC definition for ShoppingCartService
 
+message ListItemPopularity {
+  repeated ItemPopularity itemPopularity = 1;
+}
+
+service StreamPopularityService {
+  rpc StreamPopularity (TickerSymbol)
+        returns (stream ListItemPopularity)
+    {}
+}
+
+message TickerSymbol {
+  string name = 1;
+}
+
+message ItemPopularity {
+  string itemId = 1;
+  uint32 count = 2;
+}
+
 service ShoppingCartService {
   rpc AddItem (AddItemRequest) returns (Cart) {}
   rpc Checkout (CheckoutRequest) returns (Cart) {}

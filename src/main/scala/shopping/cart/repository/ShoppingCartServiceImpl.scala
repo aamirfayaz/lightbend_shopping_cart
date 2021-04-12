@@ -100,7 +100,8 @@ class ShoppingCartServiceImpl(system: ActorSystem[_],itemPopularityRepository: I
       case Some(count) =>
         GetItemPopularityResponse(in.itemId, count)
       case None =>
-        GetItemPopularityResponse(in.itemId, 0L)
+        GetItemPopularityResponse(in.itemId)
     }
   }
+
 }

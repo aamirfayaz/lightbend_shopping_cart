@@ -1,17 +1,15 @@
 package shopping.cart
 
-import scala.concurrent.ExecutionContext
-import scala.concurrent.Future
-import scala.concurrent.duration._
-import scala.util.Failure
-import scala.util.Success
 import akka.actor.typed.ActorSystem
-import akka.grpc.scaladsl.ServerReflection
-import akka.grpc.scaladsl.ServiceHandler
+import akka.grpc.scaladsl.{ServerReflection, ServiceHandler}
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model.HttpRequest
-import akka.http.scaladsl.model.HttpResponse
-import shopping.cart.proto.ShoppingCartServiceHandler
+import akka.http.scaladsl.model.{HttpRequest, HttpResponse}
+import shopping.cart.proto.{ShoppingCartServiceHandler, StreamPopularityServiceHandler}
+import shopping.cart.repository.ItemPopularityRepositoryImpl
+
+import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.duration._
+import scala.util.{Failure, Success}
 
 object ShoppingCartServer {
 
@@ -28,7 +26,8 @@ object ShoppingCartServer {
       ServiceHandler.concatOrNotFound(
         ShoppingCartServiceHandler.partial(grpcService),
         // ServerReflection enabled to support grpcurl without import-path and proto parameters
-        ServerReflection.partial(List(proto.ShoppingCartService))
+        ServerReflection.partial(List(proto.ShoppingCartService)),
+        StreamPopularityServiceHandler.partial(new StreamItemPopularityServiceImpl(system, new ItemPopularityRepositoryImpl))
       )
 
     val bound =

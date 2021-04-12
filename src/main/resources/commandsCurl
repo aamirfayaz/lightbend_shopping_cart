@@ -50,7 +50,7 @@ grpcurl -d '{\"itemId\":\"hoodie\"}' -plaintext 127.0.0.1:8101 shoppingcart.Shop
 
 ===========================================================================================================================
 --add items to cart---
-./grpcurl -d '{"cartId":"cart-101", "itemId":"socks", "quantity":3}' -plaintext 127.0.0.1:8101 shoppingcart.ShoppingCartService/AddItem
+./grpcurl -d '{"cartId":"cart-201", "itemId":"socks", "quantity":3}' -plaintext 127.0.0.1:8101 shoppingcart.ShoppingCartService/AddItem
 --fetch items from cart---
 ./grpcurl -d '{"cartId":"cart-101"}'  -plaintext 127.0.0.1:8101 shoppingcart.ShoppingCartService/GetCart
 

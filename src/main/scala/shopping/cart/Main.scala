@@ -36,7 +36,7 @@ class Main(context: ActorContext[Nothing])
   ScalikeJdbcSetup.init(system)
   val itemPopularityRepository = new ItemPopularityRepositoryImpl()
   ItemPopularityProjection.init(system, itemPopularityRepository)
-  PublishEventsProjection.init(system)
+  //PublishEventsProjection.init(system)
   val grpcService = new ShoppingCartServiceImpl(system,itemPopularityRepository)
   ShoppingCartServer.start(grpcInterface, grpcPort, system, grpcService)
 

@@ -44,7 +44,6 @@ object ItemPopularityProjection {
         readJournalPluginId = JdbcReadJournal.Identifier,
         tag = tag)
 
-
     JdbcProjection.exactlyOnce(
       projectionId = ProjectionId("ItemPopularityProjection", tag),
       sourceProvider,

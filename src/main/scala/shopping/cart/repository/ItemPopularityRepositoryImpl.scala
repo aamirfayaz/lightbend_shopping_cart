@@ -1,6 +1,7 @@
 package shopping.cart.repository
 
 import scalikejdbc.{DBSession, scalikejdbcSQLInterpolationImplicitDef}
+import shopping.cart.proto.{ItemPopularity, ListItemPopularity}
 
 class ItemPopularityRepositoryImpl() extends ItemPopularityRepository {
 
@@ -39,5 +40,28 @@ class ItemPopularityRepositoryImpl() extends ItemPopularityRepository {
       .map(_.long("count"))
       .toOption()
       .apply()
+  }
+
+
+  override def itemWithPopularity(session: ScalikeJdbcSession) = {
+    ListItemPopularity (
+
+      if(session.db.isTxAlreadyStarted) {
+        session.db.withinTx { implicit dbSession =>
+          sql"SELECT itemid, count FROM item_popularity"
+            .map(rs => ItemPopularity(rs.get(1), rs.get(2)))
+            .toList()
+            .apply()
+        }
+      } else {
+        session.db.readOnly { implicit dbSession =>
+          sql"SELECT itemid, count FROM item_popularity"
+            .map(rs => ItemPopularity(rs.get(1), rs.get(2)))
+            .toList()
+            .apply()
+        }
+      }
+
+    )
   }
 }
