@@ -15,6 +15,9 @@ service StreamPopularityService {
   rpc StreamPopularity (TickerSymbol)
         returns (stream ListItemPopularity)
     {}
+  rpc StreamItemAdded(Cart)
+        returns(stream Cart)
+        {}
 }
 
 message TickerSymbol {

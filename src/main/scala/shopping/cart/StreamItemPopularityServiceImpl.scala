@@ -27,6 +27,10 @@ class StreamItemPopularityServiceImpl(system: ActorSystem[_], repo: ItemPopulari
       }
     }).mapMaterializedValue(_ => NotUsed)
   }
+
+  override def streamItemAdded(cart: Cart): Source[Cart, NotUsed] = {
+    Source.empty
+  }
 }
 
 //#impl
