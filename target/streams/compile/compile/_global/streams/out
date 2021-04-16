@@ -1,0 +1,7 @@
+[0m[[0m[33mwarn[0m] [0m[0m/home/bahwan/code/shopping-cart/src/main/scala/shopping/cart/ShoppingCart.scala:180:9: local val x in method init is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val x: ActorRef[ShardingEnvelope[Command]] = ClusterSharding(system).init(Entity(EntityKey)(behaviorFactory))[0m
+[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/bahwan/code/shopping-cart/src/main/scala/shopping/cart/StreamItemPopularityServiceImpl.scala:14:15: private val blockingJdbcExecutor in class StreamItemPopularityServiceImpl is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m  private val blockingJdbcExecutor: ExecutionContext =[0m
+[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

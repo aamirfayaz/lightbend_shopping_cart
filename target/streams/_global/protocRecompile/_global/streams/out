@@ -1,0 +1,6 @@
+[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service interface for shopping.cart.proto.StreamPopularityService[0m
+[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service interface for shopping.cart.proto.ShoppingCartService[0m
+[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC client for shopping.cart.proto.StreamPopularityService[0m
+[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC client for shopping.cart.proto.ShoppingCartService[0m
+[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service handler for shopping.cart.proto.StreamPopularityService[0m
+[0m[[0m[0minfo[0m] [0m[0mGenerating Akka gRPC service handler for shopping.cart.proto.ShoppingCartService[0m

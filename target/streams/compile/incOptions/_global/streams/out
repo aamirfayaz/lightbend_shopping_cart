@@ -1,0 +1,67 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/bahwan/code/shopping-cart/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$ItemAdded$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$AddItem$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$AddItem.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamItemPopularityServiceImpl.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Get$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Checkout$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Summary$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Checkout.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$State$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Event.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemPopularityProjection.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$CheckedOut.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$CheckedOut$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$ItemAdded.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemPopularityProjection$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Summary.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$State.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Get.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Command.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$ItemAdded$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$AddItem$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$AddItem.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamItemPopularityServiceImpl.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Get$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Checkout$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Summary$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Checkout.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$State$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Event.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemPopularityProjection.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$CheckedOut.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$CheckedOut$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$ItemAdded.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemPopularityProjection$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Summary.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$State.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Get.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Command.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/bahwan/code/shopping-cart/target/scala-2.13/classes.bak[0m
+	ShoppingCart$AddItem.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StreamItemPopularityServiceImpl.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Get$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Checkout$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Summary$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Checkout.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$State$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Event.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemPopularityProjection.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$CheckedOut.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$CheckedOut$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$ItemAdded.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ItemPopularityProjection$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Summary.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$State.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Get.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart$Command.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ShoppingCart.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/bahwan/code/shopping-cart/target/scala-2.13/classes.bak[0m

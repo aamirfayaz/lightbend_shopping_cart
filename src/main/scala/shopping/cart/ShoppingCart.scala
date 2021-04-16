@@ -170,11 +170,11 @@ object ShoppingCart {
   def init(system: ActorSystem[_]): Unit = {
     val behaviorFactory: EntityContext[Command] => Behavior[Command] = {
       entityContext =>
-        println("*****111*****" + entityContext.entityId)
+       // println("*****111*****" + entityContext.entityId)
         val i = math.abs(entityContext.entityId.hashCode % tags.size)
-        println("*****i*****" + i)
+       // println("*****i*****" + i)
         val selectedTag = tags(i)
-        println("*****selectedTag*****" + selectedTag)
+       // println("*****selectedTag*****" + selectedTag)
         ShoppingCart(entityContext.entityId, selectedTag)
     }
     val x: ActorRef[ShardingEnvelope[Command]] = ClusterSharding(system).init(Entity(EntityKey)(behaviorFactory))

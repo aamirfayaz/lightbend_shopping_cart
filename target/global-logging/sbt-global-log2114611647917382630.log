@@ -1,0 +1,67 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.6 (Amazon.com Inc. Java 11.0.10)
+[debug]       Load.loadUnit: plugins took 101.003685ms
+[debug]       Load.loadUnit: defsScala took 0.393914ms
+[debug] [Loading] Scanning directory /home/bahwan/.sbt/1.0/plugins
+[debug]         Load.loadUnit: mkEval took 10.579807ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/bahwan/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 36.186472 ms
+[info] loading settings for project global-plugins from metals.sbt ...
+[debug]           Load.resolveProject(global-plugins) took 82.366927ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /home/bahwan/.sbt/1.0/plugins, plugins: List(<none>))) took 138.698395ms
+[debug] [Loading] Done in /home/bahwan/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 2406.630892ms
+[debug]       Load.loadUnit: cleanEvalClasses took 47.775271ms
+[debug]     Load.loadUnit(file:/home/bahwan/.sbt/1.0/plugins/, ...) took 2567.914725ms
+[debug]   Load.apply: load took 2893.498722ms
+[debug]   Load.apply: resolveProjects took 28.943376ms
+[debug]   Load.apply: finalTransforms took 268.717323ms
+[debug]   Load.apply: config.delegates took 12.393178ms
+[debug]   Load.apply: Def.make(settings)... took 517.358014ms
+[debug]   Load.apply: structureIndex took 95.219993ms
+[debug]   Load.apply: mkStreams took 1.664528ms
+[info] loading global plugins from /home/bahwan/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 7337.111128ms
+[debug]           Load.loadUnit: plugins took 26.208672ms
+[debug]           Load.loadUnit: defsScala took 0.00497ms
+[debug] [Loading] Scanning directory /home/bahwan/code/shopping-cart/project
+[debug]             Load.loadUnit: mkEval took 0.298679ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/bahwan/code/shopping-cart/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.127599 ms
+[info] loading settings for project shopping-cart-build from lightbend.sbt,plugins.sbt ...
+[debug]               Load.resolveProject(shopping-cart-build) took 1.841342ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id shopping-cart-build, base: /home/bahwan/code/shopping-cart/project, plugins: List(<none>))) took 4.623843ms
+[debug] [Loading] Done in /home/bahwan/code/shopping-cart/project, returning: (shopping-cart-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 133.450238ms
+[debug]           Load.loadUnit: cleanEvalClasses took 1.429284ms
+[debug]         Load.loadUnit(file:/home/bahwan/code/shopping-cart/project/, ...) took 162.013672ms
+[debug]       Load.apply: load took 163.50476ms
+[debug]       Load.apply: resolveProjects took 0.141157ms
+[debug]       Load.apply: finalTransforms took 36.061382ms
+[debug]       Load.apply: config.delegates took 0.498037ms
+[debug]       Load.apply: Def.make(settings)... took 108.733999ms
+[debug]       Load.apply: structureIndex took 28.948654ms
+[debug]       Load.apply: mkStreams took 0.002458ms
+[info] loading project definition from /home/bahwan/code/shopping-cart/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
+[debug]     Load.loadUnit: plugins took 1130.498257ms
+[debug]     Load.loadUnit: defsScala took 0.004301ms
+[debug] [Loading] Scanning directory /home/bahwan/code/shopping-cart
+[debug]       Load.loadUnit: mkEval took 0.159636ms

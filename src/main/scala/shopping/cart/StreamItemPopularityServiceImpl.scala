@@ -3,12 +3,10 @@ package shopping.cart
 import akka.NotUsed
 import akka.actor.typed.{ActorSystem, DispatcherSelector}
 import akka.stream.scaladsl.Source
-import shopping.cart.proto.{Cart, ItemPopularity, ListItemPopularity, StreamPopularityService, TickerSymbol}
-import shopping.cart.repository.{ItemPopularityRepositoryImpl, ScalikeJdbcSession, ShoppingCartServiceImpl}
+import shopping.cart.proto.{Cart, ListItemPopularity, StreamPopularityService, TickerSymbol}
+import shopping.cart.repository.{ItemPopularityRepositoryImpl, ScalikeJdbcSession}
 
 import scala.concurrent.ExecutionContext
-import scala.concurrent.duration.DurationInt
-import scala.util.Random
 
 //#impl
 class StreamItemPopularityServiceImpl(system: ActorSystem[_], repo: ItemPopularityRepositoryImpl) extends StreamPopularityService {
@@ -21,7 +19,7 @@ class StreamItemPopularityServiceImpl(system: ActorSystem[_], repo: ItemPopulari
 
   override def streamPopularity(in: TickerSymbol): Source[ListItemPopularity, NotUsed] = {
     Source.fromIterator(() => Iterator.continually {
-      Thread.sleep(5000)
+      Thread.sleep(10000)
       ScalikeJdbcSession.withSession { session =>
         repo.itemWithPopularity(session)
       }

@@ -1,0 +1,15 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/protobuf/ShoppingCartService.proto,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/ShoppingCartService.proto)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/local1.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/local1.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/serialization.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/serialization.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/local2.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/local2.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/kafka.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/kafka.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/persistence.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/persistence.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/commandsCurl,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/commandsCurl)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/logback.xml,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/local3.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/local3.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/cluster.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/cluster.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/http.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/http.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/grpc.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/grpc.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/local-shared.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/local-shared.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/bahwan/code/shopping-cart/src/main/resources/application.conf,/home/bahwan/code/shopping-cart/target/scala-2.13/classes/application.conf)[0m

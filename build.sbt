@@ -75,5 +75,16 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc" %% "scalikejdbc" % ScalikeJdbcVersion,
   "org.scalikejdbc" %% "scalikejdbc-config" % ScalikeJdbcVersion,
   "com.typesafe.akka" %% "akka-stream-kafka" % AlpakkaKafkaVersion,
-  "com.lightbend.akka" %% "akka-projection-testkit" % AkkaProjectionVersion % Test
+  "com.lightbend.akka" %% "akka-projection-testkit" % AkkaProjectionVersion % Test,
+
+  Cinnamon.library.cinnamonCHMetrics,
+  Cinnamon.library.cinnamonAkka,
+  Cinnamon.library.cinnamonAkkaHttp,
+  Cinnamon.library.cinnamonJvmMetricsProducer,
+  Cinnamon.library.cinnamonPrometheus,
+  Cinnamon.library.cinnamonPrometheusHttpServer
 )
+enablePlugins(Cinnamon)
+
+cinnamon in run := true
+cinnamon in test := true
